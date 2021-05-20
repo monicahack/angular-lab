@@ -1,4 +1,4 @@
-<ol class="todo-list" *ngFor="let items of Todo; let i = index">
-    <li>{{items.task}}</li>    
-</ol>
-
+<button class="filter">Filter your to-dos</button>
+<ul class="todo-list" *ngFor="let items of Todo; let i = index">
+    <li>{{i + 1}}. <button id="complete">Complete</button> {{items.task}}</li>    
+</ul>

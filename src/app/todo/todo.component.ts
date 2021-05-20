@@ -14,7 +14,7 @@ export class TodoComponent implements OnInit {
     {task:"make breakfast", completed:true},
     {task:"walk dog", completed:false},
   ];
-  
+
   constructor() { }
 
   ngOnInit(): void {
