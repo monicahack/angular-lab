@@ -1,0 +1,44 @@
+input.filter-to-do, input.add-to-do {
+    width: 100%;
+    text-align: left;
+    background-color: white;
+    border: 1px solid #eee;
+    color: slategray;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+ul.todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+button.x {
+    float: right;
+    background-color: white;
+    border: none;
+    font-weight: 500;
+}
+
+button#complete {
+    background-color: white;
+    color: #ff1493;
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 3px;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+button.add {
+    width: 101%;
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    margin-top: 5px;
+}
