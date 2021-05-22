@@ -28,4 +28,13 @@ export class TodoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  removeTask(items: any){
+    const index: number = this.Todo.indexOf(items);
+    this.Todo.splice(index, 1);
+  }
+
+  completeTask(index: number) {
+    this.Todo[index].completed = true;
+  }
+
 }
