@@ -1,6 +1,6 @@
-<input type="text" [(ngModel)]="searchText" class="filter-to-do" placeholder="Filter your to-dos" [(ngModel)]="filterTodoInput" />
+<input type="text" [(ngModel)]="searchText" class="filter-to-do" placeholder="Filter your to-dos" />
 <ul class="todo-list" *ngFor="let items of Todo | filter : searchText : 'task'; let i = index">
-    <li>{{i + 1}}. <button *ngIf="items.completed===false" id="complete" (click)="completeTask(i)">Complete</button> <span [ngClass]="{strikethrough: items.completed}"> {{items.task}}</span> <button class="x" (click)="removeTask(items)">X</button></li>    
+    <li>{{i + 1}}. <button *ngIf="items.completed===false" id="complete" (click)="completeTask(i)">Complete</button> <span [ngClass]="{strikethrough: items.completed}"> {{items.task}}</span> <button class="x" (click)="removeTask(items)"><fa-icon [icon]="faTimes"></fa-icon></button></li>    
 </ul>
-<input class="add-to-do" placeholder="Add your to-do"[(ngModel)]="addTodoInput" />
-<button class="add">Add</button>
+<input type="text" [(ngModel)]="addText" class="add-to-do" placeholder="Add your to-do" />
+<button class="add" (click)="addTask(addText)">Add</button>

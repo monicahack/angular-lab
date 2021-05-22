@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-todo',
@@ -19,9 +20,9 @@ export class TodoComponent implements OnInit {
     {task:"clean floors", completed:false},
   ];
 
-  filterTodoInput = '';
-  addTodoInput = '';
   searchText = '';
+  addText = '';
+  faTimes = faTimes;
 
   constructor() { }
 
@@ -35,6 +36,10 @@ export class TodoComponent implements OnInit {
 
   completeTask(index: number) {
     this.Todo[index].completed = true;
+  }
+
+  addTask(task: string) {
+    this.Todo.push({task:this.addText,completed:false}); 
   }
 
 }
